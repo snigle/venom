@@ -16,8 +16,10 @@ func Process(path []string, variables map[string]string, exclude []string, paral
 		log.SetLevel(log.DebugLevel)
 	case "info":
 		log.SetLevel(log.InfoLevel)
-	case "error":
+	case "warn":
 		log.SetLevel(log.WarnLevel)
+	case "error":
+		log.SetLevel(log.ErrorLevel)
 	default:
 		log.SetLevel(log.WarnLevel)
 	}
